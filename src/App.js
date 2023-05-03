@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter} from "react-router-dom";
+import Navbar from "./Components/navbar/index";
+import Body from "./Components/body/index";
+import Brand from './Components/Brand';
+import Context from './context';
+import { useState } from 'react';
+
+
+
 
 function App() {
+  
+
+  //cargue el archivo de pizzas
+  const pizzas = require('./pizzas.json');
+  //cargue la data del archivo de pizzas en el context inicial 
+  const [data, setData] = useState(pizzas)
+  //le paso la data al provider
+
+  const [carrito, setCarrito] = useState([])
+  const sharedState = {data, setData, carrito, setCarrito}
+  
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //llame al context
+    <Context.Provider value={sharedState}>
+    <BrowserRouter>
+    <Navbar/>
+    <Brand/>
+    <Body/>
+    </BrowserRouter>
+    </Context.Provider>
+    
   );
 }
 
