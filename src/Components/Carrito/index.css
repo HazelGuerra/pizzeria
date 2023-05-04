@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.carrito-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  
+  
+.carrito-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carrito-info img{
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+

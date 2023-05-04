@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(https://i.pinimg.com/originals/e3/02/7a/e3027a84c8048001b4793f6e607465c4.jpg) no-repeat center 60% / cover;
+}
+
+
+.home{
+    font-family: 'Kite One', sans-serif;
+}
+
+.home h1 {
+    color:white;
+}
+.home span {
+    color:white;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+  li::before {
+    content: "🍕";
+    margin-right: 5px;
+  }
+
+.botones {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
